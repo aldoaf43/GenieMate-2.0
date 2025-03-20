@@ -12,7 +12,7 @@ import Image from "next/image";
 
 export function Navbar() {
   return (
-    <div className="fixed left-0 top-0 z-50 w-full bg-white dark:bg-dark-background sm:relative">
+    <div className="fixed left-0 top-0 z-20 w-full dark:bg-dark-background sm:relative border-b-4 border-border dark:border-darkNavBorder">
       <div className="px-4 py-6 sm:px-12">
         <Disclosure as={"nav"}>
           {({ open }) => (
@@ -36,8 +36,8 @@ export function Navbar() {
                         height={40}
                         className="hidden dark:block"
                       />
-                      <h2 className="cursor-pointer font-roboto-mono text-2xl font-black">
-                        Genie Mate.
+                      <h2 className="cursor-pointer font-public-sans text-2xl font-black">
+                        Genie Mate
                       </h2>
                     </div>
                   </Link>
