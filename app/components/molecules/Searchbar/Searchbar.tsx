@@ -19,7 +19,7 @@ export const SearchBar = ({
     <div className="relative w-full max-w-4xl mx-auto">
       <div className="relative">
         <Textarea
-          className="w-full rounded-xl border border-gray-300 bg-white p-4 pr-14 text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-blue-700 resize-none shadow-sm dark:bg-dark-foreground dark:text-white dark:border-none"
+          className="w-full rounded-xl border border-gray-300 p-4 pr-14 text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-blue-700 resize-none shadow-sm dark:bg-dark-foreground dark:text-white dark:border-none"
           value={searchTerm}
           onChange={handleInputChange}
           placeholder={placeholder}
@@ -30,8 +30,8 @@ export const SearchBar = ({
         
 
         <Button
-          className="absolute bottom-4 right-3 flex h-8 w-8 items-center justify-center rounded-full shadow-md"
-          variant={"default"}
+          className="absolute bottom-4 right-3 flex h-8 w-8 items-center justify-center shadow-md"
+          variant={!searchTerm.trim() && fileUploaded?"noShadow" : "default"}
           onClick={handleButtonClick}
           disabled={!searchTerm.trim() && fileUploaded}
         >

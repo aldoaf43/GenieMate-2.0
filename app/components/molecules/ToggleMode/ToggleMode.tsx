@@ -13,9 +13,7 @@ export const ToggleMode = () => {
     <Button
       variant={"default"}
       onClick={() => setTheme(dark ? "light" : "dark")}
-      className={`flex items-center justify-center transition-colors duration-300 ${
-        dark ? "hover:bg-gray-300/20" : "hover:bg-gray-800/20"
-      } p-2 rounded-full`}
+      className={`flex items-center justify-center transition-colors duration-300 p-2 `}
     >
       <AnimatePresence mode="wait" initial={false}>
         {dark ? (
@@ -26,7 +24,7 @@ export const ToggleMode = () => {
             exit={{ opacity: 0, scale: 0.8 }}
             transition={{ duration: 0.3 }}
           >
-            <SunIcon className="size-5 text-white" />
+            <SunIcon className="size-5" />
           </motion.div>
         ) : (
           <motion.div
@@ -36,7 +34,7 @@ export const ToggleMode = () => {
             exit={{ opacity: 0, scale: 0.8 }}
             transition={{ duration: 0.3 }}
           >
-            <MoonIcon className="size-5 text-gray-800" />
+            <MoonIcon className="size-5sea" />
           </motion.div>
         )}
       </AnimatePresence>

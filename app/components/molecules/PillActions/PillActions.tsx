@@ -1,4 +1,4 @@
-import { Badge } from "@/app/components";
+import { Button } from "@/app/components";
 import {
   SparklesIcon,
   CodeBracketIcon,
@@ -23,15 +23,17 @@ const PillActions = () => {
       <div className="items-center">
         <div className="my-2 flex flex-wrap items-center gap-4">
           {actions.map((actions) => (
-            <Badge
+            <Button
+              variant={"default"}
+              size={"default"}
               key={actions.label}
-              className=" rounded-3xl w-full sm:w-auto px-4 bg-white text-black py-2 text-base flex items-center gap-2 dark:bg-dark-foreground dark:text-white dark:border-gray-500 border-slate-200 hover:bg-slate-200 dark:hover:bg-slate-800"
+              className="flex items-center gap-2"
             >
               <span className="cursor-pointer flex items-center gap-2">
                 {actions.icon}
                 {actions.label}
               </span>
-            </Badge>
+            </Button>
           ))}
         </div>
       </div>

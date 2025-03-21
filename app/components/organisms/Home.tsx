@@ -39,7 +39,7 @@ export default function Home() {
     <main>
       <Seo />
       <Navbar />
-       <SearchHero hasSearched={false}>
+       <SearchHero hasSearched={responses.length > 0}>
         <SearchBar
           searchTerm={input}
           handleInputChange={handleInputChange}

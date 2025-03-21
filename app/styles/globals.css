@@ -1,11 +1,20 @@
 @import "tailwindcss";
 
+
 @plugin "tailwindcss-animate";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
+  --color-main: var(--main);
+  --color-bw: var(--bw);
+  --color-blank: var(--blank);
+  --color-border: var(--border);
+  --color-text: var(--text);
+  --color-mtext: var(--mtext);
+  --color-ring: var(--ring);
+  --color-ring-offset: var(--ring-offset);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -42,15 +51,28 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  
+  --shadow-shadow: var(--shadow);
+  --box-shadow-x: var(--box-shadow-x);
+  --box-shadow-y: var(--box-shadow-y);
+  --reverse-box-shadow-x: var(--reverse-box-shadow-x);
+  --reverse-box-shadow-y: var(--reverse-box-shadow-y);
+  --base-font-weight: var(--base-font-weight);
+  --heading-font-weight: var(--heading-font-weight);
+  --radius: var(--radius);
 }
 
-@layer base {
+
   :root {
-    --main: #FD9745;
+    --main: #88aaee;
     --overlay: rgba(0, 0, 0, 0.8); /* background color overlay for alert dialogs, modals, etc. */
   
-    --background: #fff4e0;
-    --bw: #fff; /* white and secondary black e.g. utility class variant would be: bg-[#fff] dark:bg-[#212121] */
+    --background: #E0E7F1;
+    --bw: #fff;
+    --secondary: #FD9745;
+    --primary: #ff6b6b;
+    --accent: #FFDC58;
+    --destructive: #ff6b6b;
     --blank: #000; /* blank black and white */
     --border: #000;
     --text: #000;
@@ -58,7 +80,7 @@
     --ring: #000;
     --ring-offset: #fff;
   
-    --border-radius: 8px;
+    --radius: 8px;
     --box-shadow-x: 4px;
     --box-shadow-y: 4px;
     --reverse-box-shadow-x: -4px;
@@ -70,7 +92,7 @@
   }
   
   .dark {
-    --background: #272933;
+    --background: #374151;
     --bw: #212121;
     --blank: #fff;
     --border: #000;
@@ -81,7 +103,7 @@
   
     --shadow: var(--box-shadow-x) var(--box-shadow-y) 0px 0px var(--border);
   }
-}
+
 
 @layer base {
   * {

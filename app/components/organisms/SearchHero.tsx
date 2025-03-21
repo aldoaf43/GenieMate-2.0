@@ -18,7 +18,7 @@ export const SearchHero = ({
               <div>
                 <h1 className="mb-4 font-roboto-mono text-4xl font-black text-[#111111] dark:text-white md:text-6xl">
                   Improve Your Notes with{" "}
-                  <span className="text-blue-700">AI</span>
+                  <span className="text-main">AI</span>
                 </h1>
                 <h2 className="mb-4 flex flex-col items-center font-roboto-mono text-xl font-light text-[#111111] dark:text-white">
                   Summarize, organize, and enhance your study materials
