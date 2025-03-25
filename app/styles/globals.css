@@ -8,6 +8,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-main: var(--main);
+  --color-active: var(--active);
   --color-bw: var(--bw);
   --color-blank: var(--blank);
   --color-border: var(--border);
@@ -53,6 +54,7 @@
   --radius-xl: calc(var(--radius) + 4px);
   
   --shadow-shadow: var(--shadow);
+  --shadow-reverse-shadow: var(--reverse-shadow);
   --box-shadow-x: var(--box-shadow-x);
   --box-shadow-y: var(--box-shadow-y);
   --reverse-box-shadow-x: var(--reverse-box-shadow-x);
@@ -65,18 +67,18 @@
 
   :root {
     --main: #88aaee;
-    --overlay: rgba(0, 0, 0, 0.8); /* background color overlay for alert dialogs, modals, etc. */
-  
+    --overlay: rgba(0, 0, 0, 0.8);
+    
     --background: #E0E7F1;
     --bw: #fff;
     --secondary: #FD9745;
     --primary: #ff6b6b;
     --accent: #FFDC58;
     --destructive: #ff6b6b;
-    --blank: #000; /* blank black and white */
+    --blank: #000;
     --border: #000;
     --text: #000;
-    --mtext: #000; /* text that is placed on background with main color e.g. text color of default button */
+    --mtext: #000;
     --ring: #000;
     --ring-offset: #fff;
   
@@ -112,4 +114,27 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+
+.perspective {
+  perspective: 1000px;
+}
+
+.transform-style {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+  position: relative;
+  transition: transform 0.7s;
 }

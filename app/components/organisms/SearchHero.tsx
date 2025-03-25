@@ -10,9 +10,9 @@ export const SearchHero = ({
   hasSearched: boolean;
 }) => {
   return (
-    <div className="mx-auto mt-6 flex max-w-5xl flex-col items-center justify-center px-4 pt-32 sm:px-12 sm:pt-4">
+    <div className="mx-auto mt-6 flex max-w-5xl flex-col items-center justify-center px-4 pt-32 sm:px-12 sm:pt-4 gap-4">
       <div className="flex w-full flex-col items-center gap-4 text-center sm:flex-row">
-        <div className="w-full">
+        <div className="w-full gap-4 flex flex-col items-center justify-center">
           {!hasSearched ? (
             <div className="flex flex-col items-center justify-center text-center gap-3 ">
               <div>

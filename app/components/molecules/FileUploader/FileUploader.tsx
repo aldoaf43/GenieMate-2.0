@@ -1,6 +1,6 @@
 import React from "react";
 import { useAtom } from "jotai";
-import { inputFileAtom } from "@/app/components";
+import { inputFileAtom } from "@/app/store";
 import { PaperClipIcon } from "@heroicons/react/24/solid";
 
 export const FileUploader = () => {
@@ -14,9 +14,9 @@ export const FileUploader = () => {
   };
 
   return (
-    <div className="absolute bottom-4 left-3 flex flex-row gap-4 items-center space-y-4">
-    <label className=" cursor-pointer">
-        <PaperClipIcon className="h-4 w-4 text-gray-400 hover:text-blue-600" />
+    <div className="absolute bottom-3 left-3 flex flex-row gap-2 items-center justify-center">
+    <label className=" cursor-pointer flex items-center justify-center mb-0">
+        <PaperClipIcon className={`h-4 w-4 hover:text-main" ${selectedFile? "text-main":"text-white"}`} />
         <input
         type="file"
         className="hidden"
@@ -25,8 +25,8 @@ export const FileUploader = () => {
         />
     </label>
     {selectedFile && (
-        <div className="text-sm text-gray-600">
-          📂 {selectedFile.name}
+        <div className="text-sm flex flex-row">
+         <span>{selectedFile.name}</span>
         </div>
       )}
     </div>

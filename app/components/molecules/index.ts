@@ -3,3 +3,5 @@ export * from "./Searchbar";
 export * from "./PillActions";
 export * from "./ResponseDisplay";
 export * from "./ToggleMode";
+export * from "./QuestionaryCarousel";
+export * from "./QACard";
