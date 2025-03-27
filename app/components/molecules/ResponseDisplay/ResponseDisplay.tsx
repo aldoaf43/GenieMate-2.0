@@ -7,7 +7,7 @@ import { Button, Skeleton, QuestionaryCarousel } from "@/app/components";
 type Props = {
   responses: ResumeResponseData[];
   isPending: boolean;
-  error: string | null;
+  error: Error | null;
   onRetry: () => void;
 };
 
@@ -18,7 +18,7 @@ export const  ResponseDisplay: React.FC<Props> = ({ responses, isPending, error,
         
         {error && (
           <div className="mt-4 p-4 rounded-lg shadow-md w-full">
-            <p>⚠️ <strong>{error}</strong></p>
+            <p>⚠️ <strong>{error.message}</strong></p>
             <button
               onClick={onRetry}
               className=" rounded-3xl w-full sm:w-auto px-4 text-black py-2 text-base flex items-center gap-2 dark:text-white dark:border-gray-500 border-slate-200 hover:bg-slate-200 dark:hover:bg-slate-800"

@@ -8,7 +8,7 @@ import { ResumeRequest, ResumeResponseData } from "@/app/models";
 import { searchAtom, responsesAtom, inputAtom, inputFileAtom, actionsAtom } from "@/app/store";
 
 export default function Home() { 
-  const [request, setRequest] = useAtom(searchAtom);
+  const [, setRequest] = useAtom(searchAtom);
   const [responses, setResponses] = useAtom(responsesAtom);
   const [input, setInput] = useAtom(inputAtom);
   const [inputFile, setInputFile] = useAtom(inputFileAtom);
@@ -47,7 +47,7 @@ export default function Home() {
           fileUploaded={!inputFile}
         />
        </SearchHero>
-       <ResponseDisplay responses={responses} isPending={isPending} error={error?.message!} onRetry={handleButtonClick} />
+       <ResponseDisplay responses={responses} isPending={isPending} error={error} onRetry={handleButtonClick} />
     </main>
   );
 }

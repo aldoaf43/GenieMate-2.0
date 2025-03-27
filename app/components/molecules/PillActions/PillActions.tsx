@@ -10,9 +10,9 @@ import { useAtom } from "jotai";
 
 const PillActions = () => {
   const actionsIcons = [
-    <DocumentTextIcon className="h-5 w-5" />,
-    <PuzzlePieceIcon className="h-5 w-5" />,
-    <PresentationChartBarIcon className="h-5 w-5" />,
+    <DocumentTextIcon key={1} className="h-5 w-5" />,
+    <PuzzlePieceIcon key= {2} className="h-5 w-5" />,
+    <PresentationChartBarIcon key={3} className="h-5 w-5" />,
   ];
 
   const actions = AVAILABLE_ACTIONS.map((action) => ({
@@ -26,11 +26,11 @@ const PillActions = () => {
     <div className="mb-4 flex flex-col gap-5 sm:flex-row sm:items-center">
       <div className="items-center">
         <div className="flex flex-wrap items-center gap-4">
-          {actions.map((actions) => (
+          {actions.map((actions, index) => (
             <Button
               variant={selectedActions.includes(actions.label) ? "noShadow" : "default"  }
               size={"default"}
-              key={actions.label}
+              key={index}
               className="flex items-center gap-2"
               onClick={() => setSelectedActions(selectedActions.includes(actions.label) ? selectedActions.filter((action) => action !== actions.label) : [...selectedActions, actions.label])}
             >
