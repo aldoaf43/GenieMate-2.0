@@ -1,5 +1,4 @@
-// const API_BASE_URL = "http://3.131.56.243:8000/api"; 
-const API_BASE_URL = "http://127.0.0.1:8000/api"; 
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_SERVER_URL; 
 
 type HTTPMethod = "GET" | "POST" | "PUT" | "DELETE";
 
