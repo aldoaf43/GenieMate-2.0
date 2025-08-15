@@ -4,8 +4,8 @@
 Genie Mate is a student-focused study companion that transforms your notes into effective learning tools. Just upload your content and get AI-generated **summaries**, **questionnaires**, or **mind maps** to help you retain and understand concepts better.
 
 <p align="center">
-  <img src="474c50a1-e065-4c32-b273-7cd5bbfd3541.jpg" width="500"/>
-  <img src="730ffaeb-fd3d-437c-894d-9618df28f779.jpg" width="500"/>
+  <img src="public/474c50a1-e065-4c32-b273-7cd5bbfd3541.jpg" width="500"/>
+  <img src="public/730ffaeb-fd3d-437c-894d-9618df28f779.jpg" width="500"/>
 </p>
 
 ---
